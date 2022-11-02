@@ -5,9 +5,22 @@
 {% endblock %}
 
 {% block body %}
-    <p>
-        Davy Jones' Locker loaded to the gunwalls gaff loot hulk snow heave to hands barque pillage. Mizzenmast Blimey scuttle lugger spike cable chase jolly boat Pirate Round furl. Cutlass man-of-war deadlights hornswaggle tack bilge rat hail-shot lateen sail lass skysail.
-        Squiffy Nelsons folly careen grapple pressgang bucko log haul wind matey heave to. Coffer pinnace cog wench chase killick Yellow Jack scuppers crack Jennys tea cup bucko. Hornswaggle scourge of the seven seas flogging pillage clipper belaying pin case shot keelhaul hang the jib bilged on her anchor.
-    </p>
+    <h2>The team</h2>
+    <section id="team">
+        {% for member in team %}
+            <article class="member">
+                <img src="{{ member.picture }}" alt="A picture of {{ member.firstname }} {{ member.lastname }}">
+                <h3>
+                    {{ member.firstname }} {{ member.lastname }}
+                    {% if member.lastname == 'Potencier' and member.firstname == 'Fabien' %}
+                        ❤
+                    {% endif %}
+                </h3>
+                <p>born the {{ member.dateOfBirth | date('d-m-Y') }}</p>
+                <p>Created <em>{{ member.creatorOf }}</em></p>
+                <p>{{ member.description }}</p>
+            </article>
+        {% endfor %}
+    </section>
 {% endblock %}
 
