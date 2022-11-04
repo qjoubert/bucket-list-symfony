@@ -5,7 +5,17 @@
 {% endblock %}
 
 {% block body %}
-    <p>afficher les souhaits</p>
+    <h2>List of wishes</h2>
+
+    <ul>
+        {% for wish in wishes %}
+            <li>
+                <a href="{{ path('wish_details', {'id': wish.id}) }}">
+                    {{ wish.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 
 
