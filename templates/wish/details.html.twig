@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h2>{{ wish.title }}</h2>
+    <h2>{{ wish.title }} [{{ wish.category.name }}]</h2>
     <p>Created by {{ wish.author }} on {{ wish.dateCreated | date('Y-m-d')}}</p>
     {% if wish.description %}
         <p>{{ wish.description }}</p>

@@ -11,7 +11,7 @@
         {% for wish in wishes %}
             <li>
                 <a href="{{ path('wish_details', {'id': wish.id}) }}">
-                    {{ wish.title }}
+                    {{ wish.title }} [{{ wish.category.name }}]
                 </a>
             </li>
         {% endfor %}

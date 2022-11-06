@@ -1,6 +1,7 @@
 body {
     background-color: #FFFAF0;
     font-family: 'Lora', serif;
+    font-size: 1em;
 }
 
 #root-container {
@@ -46,4 +47,25 @@ h1 {
 
 footer {
     text-align: center;
+}
+
+label, input, textarea, select {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: .5rem;
+    width: 15rem;
+}
+
+form button {
+    margin: .5rem 0;
+    padding: .5rem 1rem;
+}
+
+form button:hover {
+    cursor: pointer;
+}
+
+.flash-success {
+    background-color: lightgreen;
+    padding: 1rem;
 }
