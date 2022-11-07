@@ -6,7 +6,10 @@
 
 {% block body %}
     {{ form_start(wishForm) }}
-    {{ form_widget(wishForm) }}
+    {{ form_row(wishForm.title) }}
+    {{ form_row(wishForm.description) }}
+    {{ form_row(wishForm.author, {'value': app.user.pseudo}) }}
+    {{ form_row(wishForm.category) }}
     <button>create wish</button>
     {{ form_end(wishForm) }}
 {% endblock %}
